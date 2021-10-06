@@ -6,11 +6,11 @@ Professores: Hallison e Kizzy, aprensetadores do canal Programação Dinâmica (
 
 Desenvolvimento:
 
--Ambiente virtual criado para instalacao das bibliotecas;
-
 -Arquivo "planilha.xlsx" criado para manipulacao dos dados;
 
--A lista de Categorias de cursos foi informada previamente mas decidi utilizar os proprios dados contidos na planilha. Os cursos podem possuir mais de uma categoria e estao separados com virgula. Foi necessario manipular a lista.
+-A lista de Categorias de cursos foi informada previamente mas decidi utilizar os proprios dados contidos na planilha. Os cursos podem possuir mais de uma categoria e estao separados por virgula. Foi necessario manipular a lista;
+
+-Biblioteca time adicionada para deixar comportamento do chatbox mais natural;
 
 -
 
