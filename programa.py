@@ -24,12 +24,24 @@ for i in range(len(lista_categorias)):
     print(lista_numerada)
 numero_das_categorias = input("Digite o numero dos assuntos de seu interesse (use virgulas): \n")
 
-sleep(1)
+tempo = float(input("Quanto tempo voce possui para estudar? (min)\n"))
 
-tempo = input("Quanto tempo voce possui para estudar? (Minutos)\n")
+gratuidade = input("Mostrar apenas gratuitos?(S/N)\n")
 
-sleep(1)
+if gratuidade == "N" or gratuidade == "n":
+    gratuidade == False
 
-gratuidade = input("Mostrar apenas gratuitos (S/N)? \n")
+elif gratuidade == "S" or gratuidade == "s":
+    gratuidade == True
 
-sleep(2)
+elif gratuidade != "S" or "N":
+    print(nome +" ,nao entendi sua resposta, por favor digite 'S' para cursos gratuitos e 'N' para cursos com mensalidade. /n")
+
+numero_das_categorias = numero_das_categorias.split(",")
+ncategorias = []
+
+for x in numero_das_categorias:
+    numero = int(x.strip())
+    ncategorias.append(numero)
+
+print(ncategorias)
