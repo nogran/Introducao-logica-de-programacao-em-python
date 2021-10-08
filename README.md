@@ -4,15 +4,19 @@ Projeto: Interface que receba informações sobre os interesses de um estudante 
 
 Professores: Hallison e Kizzy, aprensetadores do canal Programação Dinâmica (Youtube).
 
-Desenvolvimento:
+Desenvolvimento extra:
 
--Arquivo "planilha.xlsx" criado para manipulacao dos dados;
+-Arquivo "planilha.xlsx" criado para treinar manipulacao de dados (o curso informou os dados contidos nas colunas do arquilo em excel em forma de listas);
 
--A lista de Categorias de cursos foi informada previamente mas decidi utilizar os proprios dados contidos na planilha. Os cursos podem possuir mais de uma categoria e estao separados por virgula. Foi necessario manipular a lista;
+-Colunas de duracao, cursos, gratuidade e categorias importadas e convertidas em listas para terem indices de acordo com sua coluna; 
+
+-Os cursos podem possuir mais de uma categoria e estao separados por virgula. Foi necessario separar os cursos por virgula e remover valores repetidos para mostrar ao usuario;
 
 -Biblioteca time adicionada para deixar comportamento do chatbox mais natural;
 
--
+-Lista gratuidade convertida em true or false (working);
+
+-Valores da lista tratados (se necessario) de acordo com o seu tipo. (working).
 
 
 
