@@ -63,7 +63,7 @@ for index, value in enumerate(lista_gratuidade):
             bool_lista_gratuidade.append(True)
         else:
             bool_lista_gratuidade.append(False)
-print(bool_lista_gratuidade)
+#print(bool_lista_gratuidade)
 
 
 #   Convert user input string to integer list
@@ -75,6 +75,7 @@ for x in numero_das_categorias:
     n_user_categorias.append(lista_numerada)
 
 #   Input type test
+"""
 print(f"Nome: {nome}")
 print(f"User id categorias: {n_user_categorias}")
 print(f"Tempo: {tempo}")
@@ -84,3 +85,11 @@ print(type(nome))
 print(type(n_user_categorias))
 print(type(tempo))
 print(type(gratuidade))
+"""
+
+#   Selected categories by user
+categorias_selecionadas = []
+for n in n_user_categorias:
+    categorias_selecionadas.append(unique_lista_categorias[n].capitalize())
+
+print(categorias_selecionadas)
