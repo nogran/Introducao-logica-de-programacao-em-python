@@ -14,9 +14,9 @@ Desenvolvimento extra:
 
 -Biblioteca time adicionada para deixar comportamento do chatbox mais natural;
 
--Lista gratuidade convertida em true or false (working);
+-Lista gratuidade (string) do arquivo xlsx convertida em valores booleanos true or false;
 
--Valores da lista tratados (se necessario) de acordo com o seu tipo. (working).
+
 
 
 

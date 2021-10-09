@@ -17,9 +17,6 @@ lista_categorias = df['Categorias'].str.split(',').tolist()
 col_gratuidade = df['Gratuito']
 lista_gratuidade = col_gratuidade.tolist()
 
-#   To convert type string from list values (if necessary)
-
-
 
 #   To show unique value of Categorias to user
 col_categorias = df['Categorias'].str.split(r',\s+')
@@ -53,12 +50,20 @@ if gratuidade == "N" or gratuidade == "n":
 elif gratuidade == "S" or gratuidade == "s":
     gratuidade = True
 elif gratuidade != "S" or "N":
-    print(nome +" ,nao entendi sua resposta, por favor digite 'S' para cursos gratuitos e 'N' para cursos com mensalidade. /n")
+    print(nome +" ,nao entendi sua resposta, por favor digite 'S' para cursos gratuitos e 'N' para cursos com mensalidade.")
 
 
-#   To convert values from Gratuidade to True or False
-
-
+#   To convert values from Gratuidade list to True or False
+keys = ['Sim']
+bool_lista_gratuidade = []
+for index, value in enumerate(lista_gratuidade):
+    found = True
+    for key in keys:
+        if key in value:
+            bool_lista_gratuidade.append(True)
+        else:
+            bool_lista_gratuidade.append(False)
+print(bool_lista_gratuidade)
 
 
 #   Convert user input string to integer list
@@ -68,7 +73,6 @@ n_user_categorias = []
 for x in numero_das_categorias:
     lista_numerada = int(x.strip())
     n_user_categorias.append(lista_numerada)
-
 
 #   Input type test
 print(f"Nome: {nome}")
@@ -80,5 +84,3 @@ print(type(nome))
 print(type(n_user_categorias))
 print(type(tempo))
 print(type(gratuidade))
-
-
