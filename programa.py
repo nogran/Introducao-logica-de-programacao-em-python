@@ -35,21 +35,21 @@ sleep(3)
 #   To show a number to each category (it helps user input)
 for i in range(len(unique_lista_categorias)):
     lista_numerada = (f"{i}. {unique_lista_categorias[i]}")
-    print(lista_numerada)
+    print(lista_numerada.title())
 
 
 #   User inputs
 numero_das_categorias = input("Digite o numero dos assuntos de seu interesse (use virgulas): \n")
 tempo = float(input("Quanto tempo voce possui para estudar? (min)\n"))
-gratuidade = input("Mostrar apenas gratuitos?(S/N)\n")
+cursos_premium = input("Exibir cursos Premium? (S/N)\n")
 
 
 #   Rules to user input
-if gratuidade == "N" or gratuidade == "n":
-    gratuidade = False
-elif gratuidade == "S" or gratuidade == "s":
-    gratuidade = True
-elif gratuidade != "S" or "N":
+if cursos_premium == "N" or cursos_premium == "n":
+    cursos_premium = False
+elif cursos_premium == "S" or cursos_premium == "s":
+    cursos_premium = True
+elif cursos_premium != "S" or "N":
     print(nome +" ,nao entendi sua resposta, por favor digite 'S' para cursos gratuitos e 'N' para cursos com mensalidade.")
 
 
@@ -79,17 +79,28 @@ for x in numero_das_categorias:
 print(f"Nome: {nome}")
 print(f"User id categorias: {n_user_categorias}")
 print(f"Tempo: {tempo}")
-print(f"Gratuidade: {gratuidade}")
+print(f"Cursos Premium: {cursos_premium}")
 
 print(type(nome))
 print(type(n_user_categorias))
 print(type(tempo))
-print(type(gratuidade))
+print(type(cursos_premium))
 """
 
 #   Selected categories by user
 categorias_selecionadas = []
 for n in n_user_categorias:
-    categorias_selecionadas.append(unique_lista_categorias[n].capitalize())
+    categorias_selecionadas.append(unique_lista_categorias[n].upper())
 
-print(categorias_selecionadas)
+#print(categorias_selecionadas)
+
+print(f"Ola {nome}, com base em seu perfil voce ira gostar dos seguintes cursos:")
+
+for cat in categorias_selecionadas:
+    print(f"{cat}: ")
+    for linha in range(len(col_categorias)):
+        if bool_lista_gratuidade[linha] or cursos_premium:
+            if (cat.lower() in col_categorias[linha] and lista_duracao[linha] <= tempo):
+                print(f"-{lista_cursos[linha]} ({lista_duracao[linha]} min)")
+
+
